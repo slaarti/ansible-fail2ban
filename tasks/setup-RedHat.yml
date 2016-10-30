@@ -1,7 +1,7 @@
 ---
 - name: Ensure yum packages
   yum: pkg={{ item }} state={{ fail2ban_pkg_state }}
-  with_items: fail2ban_packages
+  with_items: "{{ fail2ban_packages }}"
   tags:
     - fail2ban
     - setup
